@@ -87,7 +87,7 @@ def bazeldnf_register_toolchains(name, register = True, **kwargs):
     for platform in PLATFORMS.keys():
         name_ = "prebuilt-%s-%s" % (name, platform)
         fname = "bazeldnf-{0}-{1}".format(
-            VERSION,
+            "v0.7.0-alpha3",
             platform,
         )
         integrity = INTEGRITY.get(platform, INTEGRITY.get(fname, None))
@@ -97,7 +97,7 @@ def bazeldnf_register_toolchains(name, register = True, **kwargs):
         url = "https://github.com/{repo_url}/releases/download/{version}/{file_name}".format(
             file_name = fname,
             repo_url = REPO_URL,
-            version = VERSION,
+            version = "v0.7.0-alpha3",
         )
         http_file(
             name = name_,
